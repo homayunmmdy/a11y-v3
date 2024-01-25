@@ -13,6 +13,16 @@ pnpm dev
 # or
 bun dev
 ```
+## Getting Email
+```bash
+npm run preview-email
+# or
+yarn preview-email
+# or
+pnpm preview-email
+# or
+bun preview-email
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
