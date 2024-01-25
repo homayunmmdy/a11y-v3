@@ -1,46 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Email App
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+This React Email App is a project designed to provide a simple and customizable email preview using Next.js. Before getting started, make sure you have Next.js installed in your project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-## Getting Email
+## Installation
+
+1. Install Next.js by running:
+
+   ```bash
+   npm install next
+   ```
+
+2. Clone this repository:
+
+   ```bash
+   git clone -b 1.react_email  https://github.com/homayunmmdy/my-app.git
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd react-email-app
+   ```
+
+4. Install project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Running the Email Preview
+
+To run the email preview, execute the following command:
+
 ```bash
 npm run preview-email
-# or
-yarn preview-email
-# or
-pnpm preview-email
-# or
-bun preview-email
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the application and run it on port 3030.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Accessing the Email Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once the application is running, open your web browser and go to [http://localhost:3030](http://localhost:3030) to view and interact with the email preview.
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+Feel free to customize the email templates and styles according to your project requirements. The project structure is organized to make it easy to modify and extend the email components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Troubleshooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If you encounter any issues or have questions, refer to the documentation or reach out to the project maintainers for assistance.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Happy coding!
