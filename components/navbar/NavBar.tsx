@@ -1,24 +1,74 @@
 import Link from "next/link";
-import React from "react";
+import { useTranslations } from "next-intl";
+
+interface Languages {
+  id: number;
+  name: string;
+  code: string;
+}
 const Navbar = () => {
+  const Languages = [
+    {
+      id: 1,
+      name: "English",
+      code: "/en",
+    },
+    {
+      id: 2,
+      name: "Français",
+      code: "/fr",
+    },
+    {
+      id: 3,
+      name: "Deutsch",
+      code: "/de",
+    },
+    {
+      id: 4,
+      name: "فارسی",
+      code: "/fa",
+    },
+  ];
+  const t = useTranslations("navbar");
   return (
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="/"
+            href="/en"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src='/logo.png'
-              className="h-8"
-              alt="My Apo"
-            />
+            <img src="/logo.png" className="h-8" alt="My Apo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               My App
             </span>
           </a>
-          <div className="flex md:order-2">
+          <div className="flex gap-2 md:order-2">
+            <details className="dropdown flex justify-center items-center bg-gray-700 rounded-lg">
+              <summary className="m-1 btn relative flex">
+                <svg
+                  className="h-5 w-5 fill-white mt-1.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 512 512"
+                >
+                  <path d="M363,176,246,464h47.24l24.49-58h90.54l24.49,58H480ZM336.31,362,363,279.85,389.69,362Z"></path>
+                  <path d="M272,320c-.25-.19-20.59-15.77-45.42-42.67,39.58-53.64,62-114.61,71.15-143.33H352V90H214V48H170V90H32v44H251.25c-9.52,26.95-27.05,69.5-53.79,108.36-32.68-43.44-47.14-75.88-47.33-76.22L143,152l-38,22,6.87,13.86c.89,1.56,17.19,37.9,54.71,86.57.92,1.21,1.85,2.39,2.78,3.57-49.72,56.86-89.15,79.09-89.66,79.47L64,368l23,36,19.3-11.47c2.2-1.67,41.33-24,92-80.78,24.52,26.28,43.22,40.83,44.3,41.67L255,362Z"></path>
+                </svg>
+              </summary>
+              <ul className="absolute top-[57px] right-[280px] p-2 shadow menu dropdown-content rounded-lg z-[1] bg-gray-800 rounded-box  max-h-[calc(100vh-10rem)] w-56 overflow-y-auto ">
+                {Languages.map((item) => (
+                  <div key={item.id}>
+                    <Link href={item.code} className="">
+                      <li className="hover:bg-gray-500 rounded-lg p-2 text-white">
+                        {item.name}
+                      </li>
+                    </Link>
+                  </div>
+                ))}
+              </ul>
+            </details>
             <button
               type="button"
               data-collapse-toggle="navbar-search"
@@ -129,15 +179,15 @@ const Navbar = () => {
                   href="/"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/aboutus"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  About
+                  {t("aboutus")}
                 </Link>
               </li>
               <li>
@@ -145,7 +195,7 @@ const Navbar = () => {
                   href="/login"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Login
+                  {t("login")}
                 </Link>
               </li>
             </ul>
