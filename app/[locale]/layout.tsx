@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import "./globals.css";
 import Navbar from "@/components/navbar/NavBar";
 import { notFound } from "next/navigation";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({ children, params }: RootLayoutPage) {
     <html lang={locale}>
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>
   );
