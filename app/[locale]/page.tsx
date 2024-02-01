@@ -1,11 +1,10 @@
-import GameGrid from '@/components/Games/GameGrid'
 import React from 'react'
+import Hero from './components/hero/Hero'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      {/* <GameGrid /> */}
+    <div className='bg-base-100'>
+      <Hero />
     </div>
   )
 }
