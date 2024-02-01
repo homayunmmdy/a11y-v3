@@ -2,7 +2,15 @@
   "navbar": {
     "home": "home",
     "aboutus": "aboutus",
-    "login": "login"
+    "Privacy_Policy":"Privacy Policy",
+    "contact":"Contact",
+    "copyright":"All Rights Reserved",
+    "login": "login",
+    "linkedin":"linkedin",
+    "github":"github",
+    "x":"X",
+    "youtube":"youtube"
+    
   },
   "users": {
     "user_table_data":"User Data Table",

@@ -2,7 +2,14 @@
     "navbar": {
       "home": "خانه",
       "aboutus": "درباره ما",
-      "login": "ورود"
+      "Privacy_Policy":"سیاست حفظ حریم خصوصی",
+      "contact":"تماس با ما",
+      "copyright":"تمامی حقوق محفوظ است",
+      "login": "ورود",
+      "linkedin":"لینکدین",
+      "github":"گیت هاب",
+      "x":"ایکس",
+      "youtube":"یوتیوب"
     },
     "users": {
       "user_table_data":"جدول داده های کاربر",
