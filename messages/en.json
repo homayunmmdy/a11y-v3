@@ -1,9 +1,11 @@
 {
   "navbar": {
+    "my_app":"My App",
     "home": "home",
     "aboutus": "aboutus",
     "Privacy_Policy":"Privacy Policy",
     "contact":"Contact",
+    "search":"search",
     "copyright":"All Rights Reserved",
     "login": "login",
     "linkedin":"linkedin",

@@ -1,9 +1,11 @@
 {
     "navbar": {
+      "my_app":"برنامه من",
       "home": "خانه",
       "aboutus": "درباره ما",
       "Privacy_Policy":"سیاست حفظ حریم خصوصی",
       "contact":"تماس با ما",
+      "search":"جستجو",
       "copyright":"تمامی حقوق محفوظ است",
       "login": "ورود",
       "linkedin":"لینکدین",

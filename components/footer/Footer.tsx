@@ -17,7 +17,7 @@ const Footer = () => {
             >
               <img src="/logo.png" className="h-8" alt="My App" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                My App
+                {t("my_app")}
               </span>
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -45,11 +45,11 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
           <div className="px-4 py-6  md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-              © {new Date().getFullYear()} <a href="/">My App</a>.{" "}
-              {t("copyright")}.
+              © {new Date().getFullYear()} <Link href="/">{t('my_app')}</Link> {" "}
+             {t("copyright")}.
             </span>
             <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-              <a
+              <Link
                 href="#"
                 title={t("youtube")}
                 rel="nofollow"
@@ -57,7 +57,7 @@ const Footer = () => {
               >
                 <FaYoutube className="w-4 h-4" />
                 <span className="sr-only">{t("youtube")}</span>
-              </a>
+              </Link>
               <Link
                 href="#"
                 title={t("linkedin")}

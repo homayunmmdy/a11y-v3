@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { FaSearch } from "react-icons/fa";
 
 interface Languages {
   id: number;
@@ -24,15 +25,16 @@ const Navbar = () => {
     <div>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
+          <Link
             href="/"
+            rel="nofollow"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src="/logo.png" className="h-8" alt="My Apo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              My App
+              {t("my_app")}
             </span>
-          </a>
+          </Link>
           <div className="flex gap-2 md:order-2">
             <details className="dropdown flex justify-center items-center bg-gray-700 rounded-lg">
               <summary className="m-1 btn relative flex">
@@ -66,22 +68,8 @@ const Navbar = () => {
               aria-expanded="false"
               className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
             >
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-              </svg>
-              <span className="sr-only">Search</span>
+              <FaSearch className="w-5 h-5"/>
+              <span className="sr-only">{t("search")}</span>
             </button>
             <div className="relative hidden md:block">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
