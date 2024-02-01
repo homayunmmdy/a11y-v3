@@ -1,17 +1,35 @@
 import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
 
-interface userData {
-    name : string ;
-    email : string;
+interface UserData {
+  name: string;
+  email: string;
 }
-const UserTable = ({ userData }: userData) => {
+
+interface UserTableProps {
+  userData: UserData[];
+  onRemoveUser: (index: number) => void;
+}
+
+const UserTable: React.FC<UserTableProps> = ({ userData, onRemoveUser }) => {
   const columns = useMemo(
     () => [
       { Header: 'Name', accessor: 'name' },
       { Header: 'Email', accessor: 'email' },
+      {
+        Header: 'Actions',
+        accessor: 'actions',
+        Cell: ({ row }) => (
+          <button
+            onClick={() => onRemoveUser(row.index)}
+            className="bg-red-500 text-white p-2 rounded"
+          >
+            Remove
+          </button>
+        ),
+      },
     ],
-    []
+    [onRemoveUser]
   );
 
   const tableData = useMemo(() => userData, [userData]);

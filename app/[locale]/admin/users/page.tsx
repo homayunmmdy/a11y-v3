@@ -19,12 +19,19 @@ const Users = () => {
       return newUserData;
     });
   };
+  const removeUser = (index) => {
+    const updatedUserData = [...userData];
+    updatedUserData.splice(index, 1);
+    setUserData(updatedUserData);
+    // Update localStorage if needed
+    localStorage.setItem('userData', JSON.stringify(updatedUserData));
+  };
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">User Data Table</h1>
       <AddUserForm addUser={addUser} />
-      <UserTable userData={userData} />
+      <UserTable userData={userData} onRemoveUser={removeUser} />
     </div>
   );
 };
