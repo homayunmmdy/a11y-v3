@@ -15,16 +15,6 @@ const Navbar = () => {
     },
     {
       id: 2,
-      name: "Français",
-      code: "/fr",
-    },
-    {
-      id: 3,
-      name: "Deutsch",
-      code: "/de",
-    },
-    {
-      id: 4,
       name: "فارسی",
       code: "/fa",
     },

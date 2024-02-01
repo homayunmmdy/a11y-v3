@@ -3,5 +3,10 @@
     "home": "home",
     "aboutus": "aboutus",
     "login": "login"
+  },
+  "users": {
+    "user_table_data":"User Data Table",
+    "name": "name",
+    "email": "email"
   }
 }
