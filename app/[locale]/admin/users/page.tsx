@@ -6,7 +6,6 @@ import UserTable from './components/UserTable';
 const Users = () => {
   const [userData, setUserData] = useState([]);
 
-  // Load data from localStorage on component mount
   useEffect(() => {
     const storedUserData = JSON.parse(localStorage.getItem('userData')) || [];
     setUserData(storedUserData);
