@@ -3,10 +3,10 @@ import React from 'react'
 const Features = () => {
   return (
     <div>
-      <div className="bg-black">
+      <div className="bg-gray-900">
 
     <section id="features"
-        className="relative block px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-900 bg-neutral-900/30">
+        className="relative block px-6 py-10 md:py-20 md:px-10">
 
 
         <div className="relative mx-auto max-w-5xl text-center">
