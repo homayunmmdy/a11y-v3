@@ -7,7 +7,7 @@ const Blogs = () => {
     <div>
         {DATAPOST.map(item => (
             <div key={item.id}>
-                <Image src="/blog/1.png" width={300} height={300} title={item.title} alt={item.slug}/>
+                <Image src="/images/1.png" width={300} height={300} title={item.title} alt={item.slug}/>
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
             </div>
