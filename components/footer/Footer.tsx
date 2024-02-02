@@ -36,8 +36,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" title={t("contact")} className="hover:text-blue-700">
-                  {t("contact")}
+                <Link href="/contactus" title={t("contactus")} className="hover:text-blue-700">
+                  {t("contactus")}
                 </Link>
               </li>
             </ul>
