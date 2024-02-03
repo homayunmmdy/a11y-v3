@@ -69,7 +69,6 @@ const Blogs = () => {
                 </div>
               </Link>
             ))}
-            
           </div>
           {totalPage > 1 && (
               <div className="flex justify-center mt-4">
