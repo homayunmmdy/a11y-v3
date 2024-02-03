@@ -10,8 +10,8 @@ import Footer from "@/components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My app",
-  description: "a simple usefull web app",
+  title: "Koolab",
+  description: "A super web application",
 };
 interface RootLayoutPage {
   children: React.ReactNode;

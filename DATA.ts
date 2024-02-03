@@ -59,7 +59,7 @@ export const DATAPOST: Post[] = [
         "New York is a city in the United States of America. It is the most populous city in the United States.",
       slug: "a-lovely-green-city-new-york",
       image:
-        "https://media.licdn.com/dms/image/D4D12AQFl3sy12mR-ew/article-cover_image-shrink_720_1280/0/1705092047188?e=1712188800&v=beta&t=RnOsdVCeSQd8B_eP3cLzQJ7A6UUTFeFqpUrVp3CSUx0",
+        "https://media.licdn.com/dms/image/D4D12AQHVjqnHRqX4pw/article-cover_image-shrink_720_1280/0/1705093757221?e=1712188800&v=beta&t=HJ1BctJ04J5h4cAVbKfgFshM5dt152xlypbuJcYg9uU",
       body: "New York is a city in the United States of America. It is the most populous city in the United States."
     },
     {

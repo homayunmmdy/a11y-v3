@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { DATAPOST } from "@/DATA";
 import Image from "next/image";
 import Link from "next/link";
 
+const ItemPerPage = 12;
+
 const Blogs = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPage = Math.ceil(DATAPOST.length / ItemPerPage);
+
+  const paginationData = DATAPOST.slice(
+    (currentPage - 1) * ItemPerPage,
+    currentPage * ItemPerPage
+  );
   return (
     <div>
       <section className="dark:bg-gray-800 dark:text-gray-100">
@@ -32,7 +43,7 @@ const Blogs = () => {
             </div>
           </a>
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DATAPOST.map((item) => (
+            {paginationData.map((item) => (
               <Link
                 href="/"
                 rel="noopener noreferrer"
@@ -41,7 +52,7 @@ const Blogs = () => {
               >
                 <Image
                   className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                  src="/images/1.png"
+                  src={item.image}
                   width={300}
                   height={300}
                   title={item.title}
@@ -58,15 +69,25 @@ const Blogs = () => {
                 </div>
               </Link>
             ))}
+            
           </div>
-          <div className="flex justify-center">
-            <button
-              type="button"
-              className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400"
-            >
-              Load more posts...
-            </button>
-          </div>
+          {totalPage > 1 && (
+              <div className="flex justify-center mt-4">
+                {[...Array(totalPage).keys()].map((page) => (
+                  <button
+                    key={page + 1}
+                    className={`mx-1 px-3 py-1 rounded ${
+                      currentPage === page + 1
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-200 text-gray-700"
+                    }`}
+                    onClick={() => setCurrentPage(page + 1)}
+                  >
+                    {page + 1}
+                  </button>
+                ))}
+              </div>
+            )}
         </div>
       </section>
     </div>
