@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"
+import CryptoJS from "crypto-js";
 import { useState } from "react";
 
 const Login = () => {
@@ -9,8 +10,23 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const isSubmitDisabled = !(email && password);
+
+  const encryptData = (data) => {
+    const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(data), "secretKey").toString();
+    return encryptedData;
+  };
+
+  const decryptData = (encryptedData) => {
+    const bytes = CryptoJS.AES.decrypt(encryptedData, "secretKey");
+    const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    return decryptedData;
+  };
+
   const handleLogin = () => {
-    Cookies.set("user" , {email} , {expires : 60})
+    const encryptedUser = encryptData({ email });
+    Cookies.set("user", encryptedUser, { expires: 60 });
+
+    // Push to home page
     router.push("/");
   };
   return (
