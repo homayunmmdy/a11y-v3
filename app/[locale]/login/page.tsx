@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie"
 import { useState } from "react";
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const isSubmitDisabled = !(email && password);
   const handleLogin = () => {
+    Cookies.set("user" , {email} , {expires : 60})
     router.push("/");
   };
   return (
