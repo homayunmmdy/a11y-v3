@@ -1,6 +1,12 @@
 import Login from "@/app/[locale]/login/page";
 import { render, screen } from "@testing-library/react";
+import { useRouter } from "next/navigation";
 
+jest.mock("next/navigation" , ()=> ({
+  useRouter:() => ({
+    push:jest.fn()
+  })
+}))
 // checking for the render 
 test("email should be rendered", () => {
   render(<Login />);
@@ -21,7 +27,7 @@ test("submit should be rendered", () => {
 });
 
 //check when they rendered 
-test("email should be empy", () => {
+test("email should be empty", () => {
   render(<Login />);
   const emailInput = screen.getByPlaceholderText(/email/i);
   expect(emailInput.value).toBe("");
