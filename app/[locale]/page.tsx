@@ -6,12 +6,12 @@ import Pricing from './components/pricing/Pricing'
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Hero />
       <Features />
       <Pricing />
       <Newsletter />
-    </div>
+    </main>
   )
 }
 
