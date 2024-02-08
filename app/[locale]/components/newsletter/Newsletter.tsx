@@ -1,35 +1,37 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Newsletter = () => {
+  const t = useTranslations("newsletter");
+
   return (
     <div>
       <div className="mx-auto">
-        <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl  sm:px-24 xl:py-32">
-          <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Keep Updated
+        <div className="relative isolate overflow-hidden bg-white dark:bg-gray-900 px-6 py-24   sm:px-24 xl:py-32">
+          <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
+            {t("title")}
           </h2>
-          <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-            Keep pace with SecureCloud advancements! Join our mailing list for
-            selective, noteworthy updates.
+          <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300">
+            {t("desc")}
           </p>
 
           <form className="mx-auto mt-10 flex max-w-md gap-x-4">
             <label htmlFor="email-address" className="sr-only">
-              Email address
+              {t("email")}
             </label>
             <input
               id="email-address"
               name="email"
               type="email"
               required
-              className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-              placeholder="Enter your email"
+              className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-black dark:text-white shadow-xl ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+              placeholder={t("email")}
             />
             <button
               type="submit"
-              className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex-none rounded-md bg-black dark:bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm hover:bg-gray-900 dark:hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Notify me
+              {t("submit")}
             </button>
           </form>
 

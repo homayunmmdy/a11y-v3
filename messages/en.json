@@ -59,5 +59,11 @@
     "option5":"basic SEO",
     "option5/2":"advanced SEO",
     "option6":"Authentication"
-  }
+  },
+  "newsletter": {
+    "title": "Keep Updated",
+    "desc":"Keep pace with Koolap advancements! Join our mailing list for selective, noteworthy updates.",
+    "submit_btn": "Enter your email",
+    "email": "Notify me"
+    }
 }
