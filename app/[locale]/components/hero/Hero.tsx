@@ -5,38 +5,38 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="h-screen w-screen bg-gray-900">
-        <div className="mx-auto max-w-7xl pt-16 sm:pt-24">
+      <div className="h-full w-full bg-gray-900">
+        <div className="mx-auto max-w-7xl pt-10">
           <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
+            <div className="block px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <span className="rounded-full uppercase bg-pink-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                      Early Access
+                      ASAP
                     </span>
                     <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                      <span className="sm:text-6xl"></span> Wireless Bluetooth
-                      Earbuds
+                      <span className="sm:text-6xl"></span> Build your dream 
+                      website {" "}
                       <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
-                        StellarGlo
+                        Koolab
                       </span>
                       <br />
-                      go beyond sound.
+                      easy to start.
                     </h1>
                   </div>
 
                   <p className="text-base text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Immerse yourself in superior audio quality with the
-                    StellarGlo Wireless Bluetooth Earbuds. These sleek and
-                    lightweight earbuds deliver crystal-clear sound and rich
-                    bass.
+                    Everyone deserves to have a space to showcase their products ,services , skill ,thoughts , ...
+                    to the world. Create your own corner on the internet with Koolap - a platform wehre you 
+                    can swiftly build websites packed with features and a user-friendly dashboard. 
+                    Don't wait any longer , start now
                   </p>
                 </div>
 
                 <div className="border-t border-gray-700"></div>
 
-                <div className="flex space-x-4 items-center text-white">
+                <div className="flex gap-3 space-x-4 justify-between lg:justify-start flex-wrap items-center text-white my-6">
                   <div className="flex items-center space-x-2">
                     <div className="flex flex-shrink-0 -space-x-1">
                       <Image
@@ -117,8 +117,8 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div className="h-4 border-l border-gray-700"></div>
-                  <Link href="" target="_blank">
-                    {/* <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1&theme=light" className="w-32 h-8 md:w-48 md:h-12 lg:w-64 lg:h-16" width="250" height="54"> */}
+                  <Link href="/" target="_blank">
+                  <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Get started</button>
                   </Link>
                 </div>
               </div>
@@ -127,13 +127,14 @@ const Hero = () => {
             <div className="flex items-center w-full col-span-6">
               <div className="px-6 h-96 lg:h-100% w-full max-w-2xl col-span-6 flex items-center mx-auto">
                 <div className="h-full w-full">
-                  <div className="h-full w-full">
-                    {/* <iframe frameborder="0" allowfullscreen="1"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                width="100%" height="100%"
-                                src="https://www.youtube.com/embed/mr15Xzb1Ook?autoplay=0&amp;mute=0&amp;controls=0&"
-                                id="widget2">
-                            </iframe> */}
+                  <div >
+                  <Image
+                        width={400}
+                        height={400}
+                        alt="website"
+                        src="/images/web.avif"
+                        className="h-full w-full"           
+                                   />
                   </div>
                 </div>
               </div>
