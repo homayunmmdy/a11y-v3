@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("hero");
+
   return (
     <div>
-      <div className="h-full w-full bg-gray-900">
+      <div className="h-full w-full bg-white dark:bg-gray-900">
         <div className="mx-auto max-w-7xl pt-10">
           <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="block px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
@@ -15,22 +17,18 @@ const Hero = () => {
                     <span className="rounded-full uppercase bg-pink-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
                       ASAP
                     </span>
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                      <span className="sm:text-6xl"></span> Build your dream 
-                      website {" "}
+                    <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white  sm:text-5xl md:text-6xl">
+                      <span className="sm:text-6xl"></span> {t("hero1")} {" "}
                       <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
-                        Koolab
+                        {t("site_name")}
                       </span>
                       <br />
-                      easy to start.
+                      {t("hero2")}
                     </h1>
                   </div>
 
-                  <p className="text-base text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Everyone deserves to have a space to showcase their products ,services , skill ,thoughts , ...
-                    to the world. Create your own corner on the internet with Koolap - a platform wehre you 
-                    can swiftly build websites packed with features and a user-friendly dashboard. 
-                    Don't wait any longer , start now
+                  <p className="text-base text-gray-800 dark:text-gray-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    {t("description")}
                   </p>
                 </div>
 
@@ -77,7 +75,7 @@ const Hero = () => {
                       />
                     </div>
 
-                    <span className="flex-shrink-0 text-xs font-medium leading-5">
+                    <span className="text-black dark:text-white flex-shrink-0 text-xs font-medium leading-5">
                       +15
                     </span>
                   </div>
@@ -118,7 +116,7 @@ const Hero = () => {
                   </div>
                   <div className="h-4 border-l border-gray-700"></div>
                   <Link href="/" target="_blank">
-                  <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Get started</button>
+                  <button type="button" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">{t("get_start")}</button>
                   </Link>
                 </div>
               </div>
