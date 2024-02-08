@@ -38,5 +38,26 @@
     "card_desc_2" : "We build our templates for speed in mind, for super-fast load times so your customers never waver.",
     "card_title_3" : "Fully Featured",
     "card_desc_3" : "Everything you need to succeed and launch your landing page, right out of the box. No need to install anything else."
+  },
+  "price": {
+    "title":"Whether it's just you, or your entire team - we've got you covered.",
+    "description": "Whether it's just you, or your entire team - we've got you covered.",
+    "order" : "Order Now",
+    "most_popular" : "Most popular",
+    "card1_title": "Starter ",
+    "card1_desc" : "Service details for Starter",
+    "card2_title": "Pro ",
+    "card2_desc" : "The most popular choice. Service details for Pro",
+    "card3_title": "Starter ",
+    "card3_desc" : "Service details for Starter",
+    "option1":"user friendly dashboard",
+    "option2":"24/7 support",
+    "option3":"limit access",
+    "option3/2":"Full access",
+    "option4":"basic testing",
+    "option4/2":"advanced testing",
+    "option5":"basic SEO",
+    "option5/2":"advanced SEO",
+    "option6":"Authentication"
   }
 }
