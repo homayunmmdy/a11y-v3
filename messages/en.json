@@ -65,5 +65,16 @@
     "desc":"Keep pace with Koolab advancements! Join our mailing list for selective, noteworthy updates.",
     "email": "Enter your email",
     "submit": "Notify me"
+    },
+  "auth": {
+    "app_name":"Koolab",
+    "welcome": "Welcome!",
+    "google":"Sing up with google.",
+    "email-text": "OR SIGNUP WITH EMAIL",
+    "email-label": "Email Address",
+    "email-input": "email",
+    "password": "password",
+    "signupBtn": "Signup",
+    "orLogin": "OR LOGIN"
     }
 }
