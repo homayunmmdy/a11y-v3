@@ -25,7 +25,7 @@ export default function RootLayout({ children, params }: RootLayoutPage) {
     notFound();
   }
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'}>
       <body className={inter.className}>
         <Navbar />
         <ChakraProvider>{children}</ChakraProvider>
