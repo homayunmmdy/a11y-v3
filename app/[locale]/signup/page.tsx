@@ -1,51 +1,17 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import Cookies from "js-cookie";
-import CryptoJS from "crypto-js";
-import { useState } from "react";
 import Link from "next/link";
 
-const Login = () => {
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const isSubmitDisabled = !(email && password);
 
-  const encryptData = (data) => {
-    const encryptedData = CryptoJS.AES.encrypt(
-      JSON.stringify(data),
-      "secretKey"
-    ).toString();
-    return encryptedData;
-  };
-
-  const decryptData = (encryptedData) => {
-    const bytes = CryptoJS.AES.decrypt(encryptedData, "secretKey");
-    const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-    return decryptedData;
-  };
-
-  const handleLogin = () => {
-    const encryptedUser = encryptData({ email });
-    Cookies.set("user", encryptedUser, { expires: 60 });
-
-    // Push to home page
-    router.push("/");
-  };
+const SignUp = () => {
   return (
     <div className="bg-gray-900">
       <div className="py-16">
         <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
-          <div
-            className="hidden lg:block lg:w-1/2 bg-cover"
-            style={{ backgroundImage: "url('/images/2.jpg')" }}
-          ></div>
+
           <div className="w-full p-8 lg:w-1/2">
             <h2 className="text-2xl font-semibold text-gray-700 text-center">
               koolab
             </h2>
-            <p className="text-xl text-gray-600 text-center">Welcome back!</p>
+            <p className="text-xl text-gray-600 text-center">Welcome!</p>
             <a
               href="#"
               className="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100"
@@ -80,7 +46,7 @@ const Login = () => {
                 href="#"
                 className="text-xs text-center text-gray-500 uppercase"
               >
-                or login with email
+                or Signup with email
               </a>
               <span className="border-b w-1/5 lg:w-1/4"></span>
             </div>
@@ -89,9 +55,7 @@ const Login = () => {
                 Email Address
               </label>
               <input
-                value={email}
                 placeholder="email"
-                onChange={(e) => setEmail(e.target.value)}
                 className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
                 type="email"
                 required
@@ -102,49 +66,40 @@ const Login = () => {
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Password
                 </label>
-                <a href="#" className="text-xs text-gray-500">
-                  Forget Password?
-                </a>
               </div>
               <input
                 placeholder="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
                 className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
                 type="password"
                 required
               />
             </div>
             <div className="mt-8">
-              <button
-                onClick={handleLogin}
-                disabled={isSubmitDisabled}
-                className={`bg-gray-700 text-white font-bold py-2 px-4 w-full rounded ${
-                  isSubmitDisabled
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-gray-600"
-                }`}
-              >
-                Login
+              <button className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded">
+                Singup
               </button>
             </div>
             <div className="mt-4 flex items-center justify-between">
               <span className="border-b w-1/5 md:w-1/4"></span>
-              <Link href="/signup">
-                <button
-                  className="text-xs text-gray-500 uppercase"
-                  data-testid="submit"
-                >
-                  or sign up
-                </button>
-              </Link>
+              <Link href="/login">
+              <button
+                className="text-xs text-gray-500 uppercase"
+                data-testid="submit"
+              >
+                or Login
+              </button>
+                </Link>
               <span className="border-b w-1/5 md:w-1/4"></span>
             </div>
           </div>
+          <div
+            className="hidden lg:block lg:w-1/2 bg-cover"
+            style={{ backgroundImage: "url('/images/2.jpg')" }}
+          ></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;

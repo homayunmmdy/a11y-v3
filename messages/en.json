@@ -63,7 +63,7 @@
   "newsletter": {
     "title": "Keep Updated",
     "desc":"Keep pace with Koolab advancements! Join our mailing list for selective, noteworthy updates.",
-    "submit_btn": "Enter your email",
-    "email": "Notify me"
+    "email": "Enter your email",
+    "submit": "Notify me"
     }
 }
