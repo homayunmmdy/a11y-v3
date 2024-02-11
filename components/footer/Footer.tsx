@@ -14,9 +14,9 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <Link
               href="/"
+              title={SiteConfig.siteName}
               className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
             >
-              <img src="/logo.png" className="h-8" alt="My App" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                {SiteConfig.siteName}
               </span>

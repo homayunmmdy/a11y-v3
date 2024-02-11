@@ -4,8 +4,8 @@ export interface SiteConfigType {
 }
 
 const SiteConfig: SiteConfigType = {
-  siteName: "Koolap",
-  description: "Build you dream site with US ,Koolap",
+  siteName: "Webby",
+  description: "Build you dream site with US ,Webby",
 };
 
 export default SiteConfig;

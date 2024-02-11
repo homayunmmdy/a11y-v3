@@ -23,7 +23,7 @@
   "hero": {
     "hero1": "Build your dream website",
     "hero2": "easy to start",
-    "description" : "Everyone deserves to have a space to showcase their products ,services , skill ,thoughts , ... to the world. Create your own corner on the internet with Koolab - a platform wehre you can swiftly build websites packed with features and a user-friendly dashboard. Don't wait any longer , start now",
+    "description" : "Everyone deserves to have a space to showcase their products ,services , skill ,thoughts , ... to the world. Create your own corner on the internet with Webby - a platform wehre you can swiftly build websites packed with features and a user-friendly dashboard. Don't wait any longer , start now",
     "get_start" : "Get started"
   },
   "features": {
@@ -60,7 +60,7 @@
   },
   "newsletter": {
     "title": "Keep Updated",
-    "desc":"Keep pace with Koolab advancements! Join our mailing list for selective, noteworthy updates.",
+    "desc":"Keep pace with Webby advancements! Join our mailing list for selective, noteworthy updates.",
     "email": "Enter your email",
     "submit": "Notify me"
     },

@@ -15,9 +15,6 @@ const Hero = () => {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <span className="rounded-full uppercase bg-pink-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                      ASAP
-                    </span>
                     <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white  sm:text-5xl md:text-6xl">
                       <span className="sm:text-6xl"></span> {t("hero1")} {" "}
                       <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
