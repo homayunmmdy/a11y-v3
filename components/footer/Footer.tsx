@@ -23,7 +23,7 @@ const Footer = () => {
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
               <li>
-                <Link href="/aboutus" className="hover:text-blue-700 me-4 md:me-6">
+                <Link href="/" className="hover:text-blue-700 me-4 md:me-6">
                   {t("aboutus")}
                 </Link>
               </li>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contactus" title={t("contactus")} className="hover:text-blue-700">
+                <Link href="/" title={t("contactus")} className="hover:text-blue-700">
                   {t("contactus")}
                 </Link>
               </li>

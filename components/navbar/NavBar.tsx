@@ -29,16 +29,6 @@ const Navbar = () => {
     },
     {
       id: 2,
-      name: "blogs",
-      href: "/blogs",
-    },
-    {
-      id: 3,
-      name: "news",
-      href: "/news",
-    },
-    {
-      id: 4,
       name: "login",
       href: "/login",
     },
