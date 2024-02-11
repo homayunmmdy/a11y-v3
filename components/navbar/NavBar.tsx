@@ -1,3 +1,4 @@
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FaSearch } from "react-icons/fa";
@@ -54,7 +55,7 @@ const Navbar = () => {
           >
             <img src="/logo.png" className="h-8" alt="My Apo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              {t("app_name")}
+              {SiteConfig.siteName}
             </span>
           </Link>
           <div className="flex gap-2 md:order-2 relative">

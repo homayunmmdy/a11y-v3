@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteConfig from "@/config/site";
 import { Inter } from "next/font/google";
 import { useLocale } from "next-intl";
 import "./globals.css";
@@ -9,8 +10,8 @@ import Footer from "@/components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Koolab",
-  description: "A super web application",
+  title: SiteConfig.siteName,
+  description: SiteConfig.description,
 };
 interface RootLayoutPage {
   children: React.ReactNode;

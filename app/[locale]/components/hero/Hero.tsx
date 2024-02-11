@@ -1,3 +1,4 @@
+import SiteConfig from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -20,7 +21,7 @@ const Hero = () => {
                     <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white  sm:text-5xl md:text-6xl">
                       <span className="sm:text-6xl"></span> {t("hero1")} {" "}
                       <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600">
-                        {t("site_name")}
+                       {SiteConfig.siteName}
                       </span>
                       <br />
                       {t("hero2")}

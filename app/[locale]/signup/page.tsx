@@ -1,3 +1,4 @@
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -12,7 +13,7 @@ const SignUp = () => {
 
           <div className="w-full p-8 lg:w-1/2">
             <h2 className="text-2xl font-semibold text-gray-700 text-center">
-              {t("app_name")}
+              {SiteConfig.siteName}
             </h2>
             <p className="text-xl text-gray-600 text-center">{t("welcome")}</p>
             <a
