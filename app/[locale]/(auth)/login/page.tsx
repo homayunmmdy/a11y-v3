@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 import { useState } from "react";
 import Link from "next/link";
+import FormSubmitBtn from "../components/FormSubmitBtn";
 
 const Login = () => {
   const router = useRouter();
@@ -34,7 +35,7 @@ const Login = () => {
     router.push("/");
   };
   return (
-    <div className="bg-gray-900">
+    <div className="bg-white dark:bg-gray-900">
       <div className="py-16">
         <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
           <div
@@ -116,17 +117,7 @@ const Login = () => {
               />
             </div>
             <div className="mt-8">
-              <button
-                onClick={handleLogin}
-                disabled={isSubmitDisabled}
-                className={`bg-gray-700 text-white font-bold py-2 px-4 w-full rounded ${
-                  isSubmitDisabled
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-gray-600"
-                }`}
-              >
-                Login
-              </button>
+              <FormSubmitBtn onClick={handleLogin} disabled={isSubmitDisabled} label="Login"  />
             </div>
             <div className="mt-4 flex items-center justify-between">
               <span className="border-b w-1/5 md:w-1/4"></span>
