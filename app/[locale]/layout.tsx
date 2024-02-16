@@ -3,9 +3,9 @@ import SiteConfig from "@/config/site";
 import { Inter } from "next/font/google";
 import { useLocale } from "next-intl";
 import "./globals.css";
-import Navbar from "@/components/navbar/NavBar";
+import Navbar from "@/components/layout/navbar/NavBar";
 import { notFound } from "next/navigation";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

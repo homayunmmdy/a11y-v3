@@ -1,4 +1,4 @@
-import Login from "@/app/[locale]/login/page";
+import Login from "@/app/[locale]/(auth)/login/page";
 import { render, screen } from "@testing-library/react";
 import { useRouter } from "next/navigation";
 
