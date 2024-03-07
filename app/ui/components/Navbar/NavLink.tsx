@@ -4,16 +4,19 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const links = [
-  {id:1, name: "خانه", href: "/" },
   {
-    id:2,
+    id: 1,
+    name: "خانه",
+    href: "/",
+  },
+  {
+    id: 2,
     name: "پروژه ها",
     href: "/projects",
   },
 ];
 const NavLink = () => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <>
       {links.map((link) => {
