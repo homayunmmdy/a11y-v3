@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Reader Setup - Web Accessibility Workshop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html" class="back-link">← Back to Workshop Index</a>
+    <main>
+      <h1>Setting Up a Screen Reader</h1>
+      <p>
+        Before starting the exercises, you'll need a screen reader. Choose the
+        appropriate one for your operating system:
+      </p>
+
+      <div class="setup-instructions">
+        <article id="macos">
+          <h2>macOS: VoiceOver</h2>
+          <p>VoiceOver comes pre-installed on all Mac computers.</p>
+          <ol>
+            <li>
+              Press <kbd>Command</kbd> + <kbd>F5</kbd> to turn VoiceOver on/off
+            </li>
+            <li>Go to System Settings > Accessibility > VoiceOver</li>
+          </ol>
+          <h3>Essential Commands</h3>
+          <ul class="shortcut-list">
+            <li>
+              <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>U</kbd>: Open Web
+              Rotor (for navigating headings, links, etc.)
+            </li>
+            <li>
+              <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>→</kbd>: Next item
+            </li>
+            <li>
+              <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>H</kbd>: Next
+              heading
+            </li>
+            <li>
+              <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Space</kbd>: Click
+              current item
+            </li>
+          </ul>
+        </article>
+
+        <article id="windows">
+          <h2>Windows: NVDA</h2>
+          <p>NVDA is a free, open-source screen reader for Windows.</p>
+          <ol>
+            <li>
+              Download NVDA from
+              <a href="https://www.nvaccess.org/download/" target="_blank"
+                >nvaccess.org</a
+              >
+            </li>
+            <li>Run the installer and follow the setup wizard</li>
+          </ol>
+          <h3>Essential Commands</h3>
+          <ul class="shortcut-list">
+            <li>
+              <kbd>Insert</kbd> + <kbd>Space</kbd>: Toggle browse/focus mode
+            </li>
+            <li><kbd>H</kbd>: Jump to next heading (in browse mode)</li>
+            <li><kbd>Tab</kbd>: Next focusable element</li>
+            <li>
+              <kbd>Insert</kbd> + <kbd>Down Arrow</kbd>: Start reading from
+              current position
+            </li>
+          </ul>
+        </article>
+
+        <article id="linux">
+          <h2>Linux: Orca</h2>
+          <p>
+            Orca is the default screen reader for GNOME-based Linux
+            distributions.
+          </p>
+          <ol>
+            <li>
+              Open Terminal and type:
+              <code>sudo apt-get install orca</code> (Ubuntu/Debian)
+            </li>
+            <li>
+              Launch Orca: <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>
+            </li>
+          </ol>
+          <h3>Essential Commands</h3>
+          <ul class="shortcut-list">
+            <li>
+              <kbd>Orca Modifier</kbd> + <kbd>;</kbd>: Enter/leave table
+              navigation
+            </li>
+            <li><kbd>Orca Modifier</kbd> + <kbd>H</kbd>: Next heading</li>
+            <li><kbd>Orca Modifier</kbd> + <kbd>L</kbd>: Next link</li>
+            <li>
+              <kbd>Orca Modifier</kbd> + <kbd>Space</kbd>: Click current item
+            </li>
+          </ul>
+        </article>
+
+        <article id="browser">
+          <h2>Browser Extension: ChromeVox</h2>
+          <p>
+            If you prefer not to install a system-wide screen reader, ChromeVox
+            is a good alternative that works directly in Chrome.
+          </p>
+          <ol>
+            <li>
+              Install
+              <a
+                href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn"
+                target="_blank"
+                >ChromeVox from the Chrome Web Store</a
+              >
+            </li>
+            <li>
+              After installation, click the ChromeVox icon in your extensions
+              bar to enable it
+            </li>
+          </ol>
+          <h3>Essential Commands</h3>
+          <ul class="shortcut-list">
+            <li><kbd>Search</kbd> + <kbd>H</kbd>: Next heading</li>
+            <li><kbd>Search</kbd> + <kbd>L</kbd>: Next link</li>
+            <li><kbd>Search</kbd> + <kbd>→</kbd>: Next item</li>
+            <li><kbd>Search</kbd> + <kbd>Return</kbd>: Click current item</li>
+          </ul>
+        </article>
+
+        <div class="next-steps">
+          <h2>Tips for Getting Started</h2>
+          <ul class="tips-list">
+            <li>
+              Start with headings navigation - it's the easiest way to
+              understand page structure
+            </li>
+            <li>
+              Practice tabbing through interactive elements to understand focus
+              order
+            </li>
+            <li>
+              Try reading a few paragraphs continuously to get used to the voice
+            </li>
+            <li>Don't get discouraged! Screen readers take time to master</li>
+          </ul>
+          <a href="index.html" class="button">Return to Workshop Index</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

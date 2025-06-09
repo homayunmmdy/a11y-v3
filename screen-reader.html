@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Reader Accessibility - Web Accessibility Workshop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html" class="back-link">← Back to Workshop Index</a>
+    <main>
+      <h1>Exercise 1: Screen Reader Accessibility</h1>
+      <p>
+        In this exercise, you'll learn how to make web content accessible to
+        screen readers by fixing non-semantic HTML.
+      </p>
+
+      <div class="exercise-content">
+        <section class="instructions">
+          <h2>Instructions</h2>
+          <p>
+            Below is a website built without semantic HTML. Try navigating it
+            with a screen reader, then update it to use proper semantic
+            elements.
+          </p>
+          <ol>
+            <li>Use your screen reader to navigate the example below</li>
+            <li>Notice how difficult it is to understand the structure</li>
+            <li>
+              Update the HTML to use semantic elements like
+              <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+              <code>&lt;main&gt;</code>, etc.
+            </li>
+            <li>Add appropriate ARIA labels where needed</li>
+            <li>
+              Test again with your screen reader to verify the improvements
+            </li>
+          </ol>
+        </section>
+
+        <section class="example">
+          <h2>Example to Fix</h2>
+          <!-- Non-semantic website example -->
+          <div class="practice-area">
+            <div class="header">
+              <span class="title">My Website</span>
+            </div>
+
+            <div class="nav">
+              <div>Home</div>
+              <div>About</div>
+              <div>Contact</div>
+            </div>
+
+            <div class="main-content">
+              <div class="section">
+                <span class="big-text">Welcome to our page</span>
+                <div class="text">Here is some important information.</div>
+              </div>
+
+              <div class="section">
+                <span class="big-text">Latest Updates</span>
+                <div class="text">Check out our new features!</div>
+              </div>
+
+              <div class="form-container">
+                <div class="form-title">Contact Us</div>
+                <div>
+                  <span>Name:</span>
+                  <input type="text" />
+                </div>
+                <div>
+                  <span>Email:</span>
+                  <input type="text" />
+                </div>
+                <div>
+                  <span>Message:</span>
+                  <input type="text" />
+                </div>
+                <div>
+                  <span>Subscribe to Newsletter</span>
+                  <input type="checkbox" />
+                </div>
+                <div>
+                  <div onclick="alert('Form submitted!')" class="submit-button">
+                    Submit Form
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hints">
+          <h2>Hints</h2>
+          <ul>
+            <li>
+              Replace <code>div</code> elements with appropriate semantic
+              elements
+            </li>
+            <li>Use proper heading hierarchy (h1, h2, etc.)</li>
+            <li>Add proper form labels and structure</li>
+            <li>Make navigation links actually clickable</li>
+            <li>Add appropriate ARIA labels for interactive elements</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
