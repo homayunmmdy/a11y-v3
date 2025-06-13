@@ -80,8 +80,109 @@ Sometimes your website will have image that are strictly for decorative purposes
 
 ### A note one SEO
 
-Search engines also make use of alternative text, For years SEO shops have suggested stuffing the keywords you want to rank for into alt text 
+Search engines also make use of alternative text, For years SEO shops have suggested stuffing the keywords you want to rank for into alt text
 whenever possible. This provides a very bad accessibility experience.
 
 ### Caption for audio
+
 Remember note all content on the web is visual! if your application has video content, be sure to use a captioning service to add closed captioning.
+
+## Semantic HTML
+
+### Element have semantic meaning but no special functionality
+
+- aside
+- footer
+- header
+
+### Elements provide a lot of build-in functionality
+
+- button
+- input
+- textarea
+
+### Form Labels
+
+Form fields can be confusing for screen reader users. There are many ways to
+label form fields so the label is read out loud whenever the field has focus.
+
+### Anti pattern - Visual only Labels
+
+A common pattern is using div's or paragraph tags to label form fields.
+
+```html
+<form>
+  <p>First Name</p>
+  <input type="text" />
+  <p>Last Name</p>
+  <input type="text" />
+  <p>Password</p>
+  <input type="password" />
+  <input type="submit" value="Submit" />
+</form>
+```
+
+### HTML Labels
+
+A better option is to use the HTML label tag which will allow screen readers to recite the label when the filed is focused.
+
+```html
+<form>
+  <label for="first">First Name</label>
+  <input id="first" type="text" />
+
+  <label for="last">Last Name</label>
+  <input id="last" type="text" />
+
+  <label for="password">Password</label>
+  <input id="password" type="password" />
+
+  <input type="submit" value="Submit" />
+</form>
+```
+
+### Implicit HTML Labels
+
+Another cool trick you can do is wrap your inputs with the label tag. This is called implicit labelling.
+
+```html
+<form>
+  <label>
+    First Name
+    <input id="first" type="text" />
+  </label>
+
+  <label for="last">
+    Last Name
+    <input id="last" type="text" />
+  </label>
+
+  <label for="password">
+    Password
+    <input id="password" type="password" />
+  </label>
+
+  <input type="submit" value="Submit" />
+</form>
+```
+
+### Limitations with the label tag
+
+The label tag can only work with label able elements.
+
+- button
+- input
+- keygen
+- meter
+- output
+- progress
+- select
+- textarea
+
+### aria-label
+
+if you ever need to label an elements not on that list. use aria-label instead.
+
+```html
+<div aria-label="Interactive div">Hello</div>
+```
