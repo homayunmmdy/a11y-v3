@@ -395,14 +395,31 @@ ARIA Properties cna accessed in CSS!
 }
 ```
 
-### Live Regions 
-Application cna become very dynamic. FOr cases where important 
-information could be coming in at any time, the ARIA spec provides the 
-ability to make an element as containing live data so that screen readers 
+### Live Regions
+
+Application cna become very dynamic. FOr cases where important
+information could be coming in at any time, the ARIA spec provides the
+ability to make an element as containing live data so that screen readers
 can read out updates as they come.
 
 ### Politeness
-The value that you pass to aria-live is politeness setting. You can pass in 
+
+The value that you pass to aria-live is politeness setting. You can pass in
+
 - **assertive:** will interrupt whatever it's doing to announce.
 - **polite:** will announce the live region update when it next idles.
 - **off:** will not read the update.
+
+## Testing and Tooling
+
+- DevTools
+- CI/CD audits
+- Linters
+
+![AXE](images/AXE.png)
+![Google lighthouse](images/Google_Lighthouse.png)
+![WAVE](images/WAVE.png)
+![AXE core](images/AXE-core.png)
+![AXE core code](images/AXE-core-code.png)
+![Lighthouse CI](images/Lighthouse_CI.png)
+![Authoring Tools](images/Authoring_Tools.png)
