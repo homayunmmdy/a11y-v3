@@ -186,3 +186,54 @@ if you ever need to label an elements not on that list. use aria-label instead.
 ```html
 <div aria-label="Interactive div">Hello</div>
 ```
+
+## Divs are not buttons
+
+here is the button with the div
+
+```html
+<div onclick="alert('hello')">Click me!</div>
+```
+
+tell screen reader it's clickable
+
+```html
+<div role="button" onclick="alert('hello')">Click me!</div>
+```
+
+allow users to tab to it
+
+```html
+<div tabindex="0" role="button" onclick="alert('hello')">Click me!</div>
+```
+
+allow keyboard users to interact with it!
+
+```html
+<div
+  tabindex="0"
+  role="button"
+  onclick="alert('hello')"
+  onKeyup="alert('hello')"
+>
+  Click me!
+</div>
+```
+
+tell screen readers what it does!
+
+```html
+<div
+  aria-label="Alert the word hello"
+  tabindex="0"
+  role="button"
+  onclick="alert('hello')"
+  onKeyup="alert('hello')"
+>
+  Click me!
+</div>
+```
+Or,just use a button
+```html
+<button onclick="alert('hello')">Click me!</button>
+```
