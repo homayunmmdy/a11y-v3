@@ -491,3 +491,7 @@ article {
   left: 0;
   top: 0.1rem;
 }
+
+#screen_readers label {
+  display: block;
+}

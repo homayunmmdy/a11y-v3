@@ -6,7 +6,7 @@
     <title>Screen Reader Accessibility - Web Accessibility Workshop</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="screen_readers">
     <a href="index.html" class="back-link">← Back to Workshop Index</a>
     <main>
       <h1>Exercise 1: Screen Reader Accessibility</h1>
@@ -55,40 +55,41 @@
             </nav>
 
             <div class="main-content">
-              <div class="section">
-                <span class="big-text">Welcome to our page</span>
-                <div class="text">Here is some important information.</div>
-              </div>
+              <header class="section">
+                <h2 class="big-text">Welcome to our page</h2>
+                <p class="text">Here is some important information.</p>
+              </header>
 
-              <div class="section">
-                <span class="big-text">Latest Updates</span>
-                <div class="text">Check out our new features!</div>
-              </div>
+              <header class="section">
+                <h2 class="big-text">Latest Updates</h2>
+                <p class="text">Check out our new features!</p>
+              </header>
 
-              <div class="form-container">
-                <div class="form-title">Contact Us</div>
-                <div>
-                  <span>Name:</span>
+              <form class="form-container">
+                <h3 class="form-title">Contact Us</h3>
+                <label>
+                  Name:
                   <input type="text" />
-                </div>
-                <div>
-                  <span>Email:</span>
+                </label>
+                <label>
+                  Email:
                   <input type="text" />
-                </div>
-                <div>
-                  <span>Message:</span>
+                </label>
+                <label>
+                  Message:
                   <input type="text" />
-                </div>
-                <div>
-                  <span>Subscribe to Newsletter</span>
+                </label>
+                <label>
+                  Subscribe to Newsletter
                   <input type="checkbox" />
-                </div>
-                <div>
-                  <div onclick="alert('Form submitted!')" class="submit-button">
-                    Submit Form
-                  </div>
-                </div>
-              </div>
+                </label>
+                <button
+                  onclick="alert('Form submitted!')"
+                  class="submit-button"
+                >
+                  Submit Form
+                </button>
+              </form>
             </div>
           </div>
         </section>
