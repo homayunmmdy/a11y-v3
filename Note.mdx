@@ -233,7 +233,28 @@ tell screen readers what it does!
   Click me!
 </div>
 ```
+
 Or,just use a button
+
 ```html
 <button onclick="alert('hello')">Click me!</button>
 ```
+
+## Screen reader only content
+
+Sometimes you'll want to communicate with a screen reader directly! One cool example
+is announcing to screen reader users that you offer accessibility features! In that case you can make
+some HTML and wrap it in a visually hidden class
+
+```css
+.visuallyhidden {
+  position: absolute;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+```
+
+
