@@ -1,0 +1,493 @@
+/* Base styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Heading styles */
+h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+/* Exercise list styles */
+.exercise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise-list li {
+  margin: 1rem 0;
+}
+
+.exercise-list a {
+  display: block;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2c3e50;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.exercise-list a:hover,
+.exercise-list a:focus {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Back link styles */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Screen reader exercise styles */
+kbd {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: monospace;
+}
+
+code {
+  background-color: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+article {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Remove old .practice styles and keep the new .practice-area styles */
+.practice-area {
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: white;
+}
+
+.practice-area .header {
+  background: #3498db;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.practice-area .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.practice-area .nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.practice-area .nav div {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.practice-area .section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.practice-area .big-text {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.practice-area .form-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.practice-area .form-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.practice-area .form-container > div {
+  margin: 1rem 0;
+}
+
+.practice-area .form-container span {
+  display: inline-block;
+  width: 150px;
+}
+
+.practice-area .form-container input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.practice-area .submit-button {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hints {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #e8f4f8;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.setup-link {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.setup-link:hover,
+.setup-link:focus {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal styles */
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #e9ecef;
+  color: #2c3e50;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #dee2e6;
+  transform: translateY(-1px);
+}
+
+.button:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+.button-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #2980b9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Scoreboard styles */
+.scoreboard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hint {
+  background-color: #e8f4f8;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+  margin: 1rem 0;
+}
+
+.match-container {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.match {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s ease;
+}
+
+.match:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.league {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.match-time {
+  background: #e74c3c;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.teams {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+}
+
+.team-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.score {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+.match-status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 4px;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  border-left: 4px solid #3498db;
+}
+
+.instructions {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.instructions ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin: 0.5rem 0;
+}
+
+.scoreboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.last-update {
+  font-size: 0.9rem;
+  color: #666;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #dee2e6;
+}
+
+.version-link {
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  color: #0369a1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.version-link:hover,
+.version-link:focus {
+  background-color: #e0f2fe;
+  border-color: #7dd3fc;
+  text-decoration: underline;
+}
+
+.shortcut-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.shortcut-list li {
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shortcut-list kbd {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.tips-list li {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+}
