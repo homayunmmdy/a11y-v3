@@ -256,13 +256,90 @@ some HTML and wrap it in a visually hidden class
   overflow: hidden;
 }
 ```
+
 ## Focus Styles
+
 Visible focus indicators are crucial for keyboard users. In this exercise,
 you'll learn how to create clear, beautiful focus styles that meet WCAG requirement.
 
 ### Focus Style requirement
+
 - Focus indicators must have a minimum contrast ratio of 3:1 against adjacent colors.
 - Focus areas should be at least 2px thick
-- Focus styles should be visible in both light and dark modes 
+- Focus styles should be visible in both light and dark modes
 - Consider using multiple indicators (outline + background change)
 - Animations can enhance focus visibility but shouldn't be distracting
+
+## Keyboard only users
+
+- Your entire application should be usable with only the keyboard (form,buttons,etc)
+- Some type of focus indicator should be used to provide a necessary clue as to the currently active item
+- Consider offering a shortcut for keyboard-only users to jump quickly to the main content (a skip link)
+
+### Keyboard Shortcuts
+
+Keyboard Shortcuts are another curb cut example. Sites like Twitter and Facebook offer keyboard
+Shortcuts for almost any action which are great for both keyboard only users and power users!
+
+![shortcuts](images/shortcut.png)
+
+### Skip Links
+
+Skip links help users skip over large headers and navigation and jump right into
+the main content of your site. When user hits tab for the first time , button will appear and
+offer users to jump right to the main section.
+
+### How to make a skip link
+
+- Create an anchor with the body Skip to content
+- Prepend it to the body of your website
+- Make it visually hidden
+- Give it a focus state which makes it visible.
+
+### Tab navigation
+
+You cna use the tab key to navigate the next tabbable item and shift + tab
+to navigate the previous item.
+
+### Tabbable elements
+
+- a
+- button
+- input
+- select
+- textarea
+- iframe
+
+### Making an element tabbable
+
+you can add the tabindex attribute to any element like this:
+
+```html
+<div tabindex="0">I'm focusable</dib>
+```
+
+### Tabindex values
+- a **negative** value means that the element should be focusable, but 
+should not be reachable via sequential keyboard navigation;
+- **0** means that the element should be focusable and reachable via 
+sequential keyboard navigation, but its relative order is defined by 
+the platform convention;
+- a **positive** value means should be focusable and reachable via 
+sequential keyboard navigation; its relative oder is defined by the 
+value of the attribute: the sequential follow the increasing number of the 
+tabindex. If several elements share the same tabindex, their
+relative oder follow their relative position in the document.
+
+![tabindex](images/tabindex.png)
+
+### Active Element
+Sometimes , especially on single page applications, it's helpful to store 
+the currently focused element before a page transition so you can return 
+to it later.
+
+### Tab trapping 
+Another useful concept is tab trapping. Consider opening a model on a 
+page which contains form. A keyboard only user will want to tab 
+around the form but unless we help, tabbing while focused on the last 
+form element will send us all the way back to the main document.
+
