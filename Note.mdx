@@ -343,3 +343,25 @@ page which contains form. A keyboard only user will want to tab
 around the form but unless we help, tabbing while focused on the last 
 form element will send us all the way back to the main document.
 
+## WAI-ARIA vs WCAG
+The main difference between WCAG and WAI-ARIA is that **WCAG sets**
+the overall accessibility **standards** (like requiring sufficient color contrast),
+while **WAI-ARIA provides techniques** to meet those standards, especially for complex,
+dynamic content (like using the aria-label attribute to give a name to custom-build component)
+
+![WAI-ARIA vs WCAG](images/WCAG_WAI_ARIA.png)
+
+### Labels, revisited
+Earlier, we learned about the label tag in HTML and how it can be used 
+to labe** certain** form elements.
+
+The ARIA spec provides us with great tools for labelling and describing 
+any element we want. The are 
+- aria-label
+- aria-labelledby
+- aria-describing
+
+### Labelledby vs. describedby
+
+![label](images/label.png)
+
