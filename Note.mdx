@@ -319,31 +319,35 @@ you can add the tabindex attribute to any element like this:
 ```
 
 ### Tabindex values
-- a **negative** value means that the element should be focusable, but 
-should not be reachable via sequential keyboard navigation;
-- **0** means that the element should be focusable and reachable via 
-sequential keyboard navigation, but its relative order is defined by 
-the platform convention;
-- a **positive** value means should be focusable and reachable via 
-sequential keyboard navigation; its relative oder is defined by the 
-value of the attribute: the sequential follow the increasing number of the 
-tabindex. If several elements share the same tabindex, their
-relative oder follow their relative position in the document.
+
+- a **negative** value means that the element should be focusable, but
+  should not be reachable via sequential keyboard navigation;
+- **0** means that the element should be focusable and reachable via
+  sequential keyboard navigation, but its relative order is defined by
+  the platform convention;
+- a **positive** value means should be focusable and reachable via
+  sequential keyboard navigation; its relative oder is defined by the
+  value of the attribute: the sequential follow the increasing number of the
+  tabindex. If several elements share the same tabindex, their
+  relative oder follow their relative position in the document.
 
 ![tabindex](images/tabindex.png)
 
 ### Active Element
-Sometimes , especially on single page applications, it's helpful to store 
-the currently focused element before a page transition so you can return 
+
+Sometimes , especially on single page applications, it's helpful to store
+the currently focused element before a page transition so you can return
 to it later.
 
-### Tab trapping 
-Another useful concept is tab trapping. Consider opening a model on a 
-page which contains form. A keyboard only user will want to tab 
-around the form but unless we help, tabbing while focused on the last 
+### Tab trapping
+
+Another useful concept is tab trapping. Consider opening a model on a
+page which contains form. A keyboard only user will want to tab
+around the form but unless we help, tabbing while focused on the last
 form element will send us all the way back to the main document.
 
 ## WAI-ARIA vs WCAG
+
 The main difference between WCAG and WAI-ARIA is that **WCAG sets**
 the overall accessibility **standards** (like requiring sufficient color contrast),
 while **WAI-ARIA provides techniques** to meet those standards, especially for complex,
@@ -352,11 +356,13 @@ dynamic content (like using the aria-label attribute to give a name to custom-bu
 ![WAI-ARIA vs WCAG](images/WCAG_WAI_ARIA.png)
 
 ### Labels, revisited
-Earlier, we learned about the label tag in HTML and how it can be used 
+
+Earlier, we learned about the label tag in HTML and how it can be used
 to labe** certain** form elements.
 
-The ARIA spec provides us with great tools for labelling and describing 
-any element we want. The are 
+The ARIA spec provides us with great tools for labelling and describing
+any element we want. The are
+
 - aria-label
 - aria-labelledby
 - aria-describing
@@ -365,3 +371,38 @@ any element we want. The are
 
 ![label](images/label.png)
 
+## Roles, States and Properties
+
+ARIA also provides roles which can be applied to any element. Example include:
+
+- button
+- checkbox
+- tree
+- banner
+- aria-autocomplete
+- aria-haspopup
+
+### ARIA in css
+
+ARIA Properties cna accessed in CSS!
+
+```css
+.dropdown[aria-expanded="false"] .icon::after {
+  content: ">";
+}
+.dropdown[aria-expanded="true"] .icon::after {
+  content: "<";
+}
+```
+
+### Live Regions 
+Application cna become very dynamic. FOr cases where important 
+information could be coming in at any time, the ARIA spec provides the 
+ability to make an element as containing live data so that screen readers 
+can read out updates as they come.
+
+### Politeness
+The value that you pass to aria-live is politeness setting. You can pass in 
+- **assertive:** will interrupt whatever it's doing to announce.
+- **polite:** will announce the live region update when it next idles.
+- **off:** will not read the update.
