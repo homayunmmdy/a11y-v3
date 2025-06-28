@@ -1,6 +1,6 @@
 # Website Accessibility, v3
 
-![Uploading 1000003497.png…]()
+![course image](https://github.com/homayunmmdy/a11y-v3/blob/main/images/course_image.png) 
 
 
 🧠 *Instructor:* Jon Kuperman
