@@ -4,7 +4,9 @@
 
 
 🧠 *Instructor:* Jon Kuperman
+
 📅 *Course Timeline:*
+
 Started: June 7, 2025
 Completed: June 14, 2025
 
