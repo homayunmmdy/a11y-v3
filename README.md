@@ -7,8 +7,9 @@
 
 📅 *Course Timeline:*
 
-Started: June 7, 2025
-Completed: June 14, 2025
+- Started: June 7, 2025
+
+- Completed: June 14, 2025
 
 
 ## 🎯 About the Course
